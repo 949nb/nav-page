@@ -16,4 +16,16 @@ main {
     padding: 40px 30px;
     display: inline-block;
     font-size: 25px;
+    position: relative;
+}
+
+#keyboard div kbd:hover > button {
+    display: inline-block;
+}
+
+#keyboard div kbd button {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    display: none;
 }

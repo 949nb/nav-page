@@ -35,6 +35,13 @@
             'z':'zhihu.com'
         }
 
+        /* var hushInLocalStorage = JSON.parse(localStorage.getItem('zzz') || 'null')
+        if(hushInLocalStorage){
+            hush = hushInLocalStorage
+        } */ 
+        //不用缓存到本地浏览器了，老子搞不好生气了！
+
+
         var index = 0;
         while(index < keys.length){
             div1 = document.createElement('div'); //创建div
@@ -48,6 +55,13 @@
                 button1 = document.createElement('button');
                 kbd1.appendChild(button1);
                 button1.textContent = "编辑";
+                button1.id = row[index2]
+                button1.onclick = function(jianting){
+                    key = (jianting['target']['id'])
+                    x = prompt('给我一个网址 XDD');
+                    hush[key] = x; //hush变更
+                    localStorage.setItem('zzz', JSON.stringify(hush))
+                }
                 index2++;
             }
             index++
@@ -59,9 +73,8 @@
             //location.href = "http://"+wangzhi;
             window.open('http://'+wangzhi,'_blank')
         }
-        button1.onclick = function(click){
-            console.log('dianji')
-        }
+
+
     </script>
 </body>
 </html>
