@@ -1,0 +1,19 @@
+main {
+    
+}
+
+#keyboard {
+}
+
+#keyboard div {
+    text-align: center;
+    margin: 10px 10px;
+
+}
+
+#keyboard div kbd {
+    border: 1px solid green;
+    padding: 40px 30px;
+    display: inline-block;
+    font-size: 25px;
+}
