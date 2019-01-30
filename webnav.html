@@ -35,13 +35,7 @@
             'z':'zhihu.com'
         }
 
-        /* var hushInLocalStorage = JSON.parse(localStorage.getItem('zzz') || 'null')
-        if(hushInLocalStorage){
-            hush = hushInLocalStorage
-        } */ 
-        //不用缓存到本地浏览器了，老子搞不好生气了！
-
-
+        //生成键盘。
         var index = 0;
         while(index < keys.length){
             div1 = document.createElement('div'); //创建div
@@ -60,12 +54,12 @@
                     key = (jianting['target']['id'])
                     x = prompt('给我一个网址 XDD');
                     hush[key] = x; //hush变更
-                    localStorage.setItem('zzz', JSON.stringify(hush))
                 }
                 index2++;
             }
             index++
         }
+
         document.onkeypress = function(jianting){
             console.log(jianting['key'])
             var a = jianting['key']
